@@ -1,5 +1,5 @@
 FROM node:18.20.8
 WORKDIR /apps
 COPY . .
-RUN npm run install
+RUN npm run install --production=false
 CMD ["npm", "start"]
