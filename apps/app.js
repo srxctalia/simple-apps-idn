@@ -25,7 +25,10 @@ app.get('/app2', (req, res) => {
 
 app.get('/users', (req, res) => {
   const sql = "SELECT * FROM tb_data ORDER BY id desc";
-  connection.query(sql,(fields) => {
+  connection.query(sql,(error, fields) => {
+      if(error){
+        res.send(error)
+      } 
       res.send(fields)
   })
 });
