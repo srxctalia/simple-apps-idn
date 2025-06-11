@@ -1,5 +1,5 @@
 name: "simple-apps"
-version: "3.9"
+# version: "3.9"
 
 services: 
   backend: 
