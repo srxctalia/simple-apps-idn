@@ -6,3 +6,9 @@ body {
 .logo {
     width: 10%;
 }
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    text-align: center;
+}
