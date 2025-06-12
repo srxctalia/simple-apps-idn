@@ -1,5 +1,6 @@
 pipeline {
     agent { label 'devops1-ludfiazimada' }
+    configFileProvider([configFile(fileId: 'efead934-55c6-4e66-bbe8-7b81f53126bb', targetLocation: '.env')]) {}
 
     stages {
         stage('Pull SCM') {
@@ -10,9 +11,6 @@ pipeline {
         
         stage('Import Environtment') {
             steps {
-                configFileProvider([configFile(fileId: 'efead934-55c6-4e66-bbe8-7b81f53126bb', targetLocation: '.env')]) {
-                    // some block
-                }
             }
         }
 
