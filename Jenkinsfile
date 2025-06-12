@@ -8,11 +8,6 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/srxctalia/simple-apps-idn.git'
             }
         }
-        
-        stage('Import Environtment') {
-            steps {
-            }
-        }
 
         stage('Build') {
             steps {
