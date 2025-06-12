@@ -8,6 +8,17 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/srxctalia/simple-apps-idn.git'
             }
         }
+        
+        stage('Import Environtment') {
+            steps {
+                script {
+                    configFileProvider([configFile(fileId: 'your-file-id', targetLocation: '.env')]) {
+                        // Access the file
+                        sh 'cat .env'
+                    }
+                }
+            }
+        }
 
         stage('Build') {
             steps {
