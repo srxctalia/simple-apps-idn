@@ -51,7 +51,7 @@ pipeline {
         
         stage('Backup') {
             steps {
-                build 'backup-image'
+                build wait: false, job: 'backup-image'
             }
         }
     }
