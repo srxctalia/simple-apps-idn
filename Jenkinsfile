@@ -60,10 +60,10 @@ pipeline {
             }
         }
         
-        // stage('Backup') {
-        //     steps {
-        //         build wait: false, job: 'backup-image'
-        //     }
-        // }
+        stage('Send Notification') {
+            steps {
+                mail bcc: '', body: 'tes', cc: '', from: '', replyTo: '', subject: 'Job '${JOB_NAME}' (${BUILD_NUMBER}) successfully', to: 'ludfiazimada387@gmail.com'
+            }
+        }
     }
 }
