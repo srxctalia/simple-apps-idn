@@ -49,10 +49,10 @@ pipeline {
             }
         }
         
-        stage('Backup') {
-            steps {
-                build wait: false, job: 'backup-image'
-            }
-        }
+        // stage('Backup') {
+        //     steps {
+        //         build wait: false, job: 'backup-image'
+        //     }
+        // }
     }
 }
