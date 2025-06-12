@@ -11,7 +11,7 @@ pipeline {
         stage('Import Environtment') {
             steps {
                 script {
-                    configFileProvider([configFile(fileId: 'efead934-55c6-4e66-bbe8-7b81f53126bb', targetLocation: '.env')]) {
+                    configFileProvider([configFile(fileId: 'efead934-55c6-4e66-bbe8-7b81f53126bb', targetLocation: 'apps/.env')]) {
                         // Access the file
                         sh 'cat .env'
                     }
