@@ -26,6 +26,13 @@ describe('Unit Test /app1', () => {
     });
   });
 
+  describe('Unit Test /ludfiazimada', () => {
+    it('should respond with "Hello Welcome back again with me, please subkrek dan liket!"', async () => {
+      const response = await request(app).get('/ludfiazimada');
+      expect(response.status).toBe(200);
+    });
+  });
+
 describe('Integration Test Connect Database', () => {
   beforeEach(() => {
     // Set the connection for the application to use
